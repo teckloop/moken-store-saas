@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\xampp\\\\htdocs\\\\moken-store-saas\" -Force | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Directory\"}else{\"File\"}}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\xampp\\\\htdocs\\\\moken-store-saas\\\\apps\" -Force | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Directory\"}else{\"File\"}}})",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\xampp\\\\htdocs\\\\moken-store-saas\\\\data\" 2>$null | Select-Object Name, @{Name=\"Size\";Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"{0:N0} bytes\" -f $_.Length}}})"
+    ]
+  }
+}

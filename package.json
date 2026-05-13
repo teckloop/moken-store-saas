@@ -1,0 +1,28 @@
+{
+  "name": "moken-store-saas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\" \"npm run dev -w apps/company-admin\" \"npm run dev -w apps/store-admin\" \"npm run dev -w apps/storefront\" \"npm run dev:edge\"",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:company": "npm run dev -w apps/company-admin",
+    "dev:store-admin": "npm run dev -w apps/store-admin",
+    "dev:storefront": "npm run dev -w apps/storefront",
+    "dev:edge": "node scripts/edge-router.mjs",
+    "dev:web": "npm run dev -w apps/web",
+    "build": "npm run build -w packages/shared && npm run build -w apps/api && npm run build -w apps/web && npm run build -w apps/company-admin && npm run build -w apps/store-admin && npm run build -w apps/storefront",
+    "start": "npm run start -w apps/api"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  }
+}
