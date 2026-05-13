@@ -16,7 +16,7 @@ echo "==> Ensuring API .env exists"
 if [ ! -f apps/api/.env ]; then
   cat > apps/api/.env <<'EOF'
 PORT=4100
-ALLOWED_ORIGINS=https://moken-saas.online,https://www.moken-saas.online,https://store.moken-saas.online,https://company.moken-saas.online,https://merchant.moken-saas.online
+ALLOWED_ORIGINS=https://moken-store.cloud,https://www.moken-store.cloud,https://store.moken-store.cloud,https://company.moken-store.cloud,https://merchant.moken-store.cloud
 EOF
 fi
 

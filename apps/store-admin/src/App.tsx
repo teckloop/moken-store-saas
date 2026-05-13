@@ -199,7 +199,7 @@ const formatPrice = (price: number, currency = "LYD") => {
   }).format(price / 100);
 };
 
-const companyAdminUrl = import.meta.env.VITE_COMPANY_URL || "https://company.moken-saas.online";
+const companyAdminUrl = import.meta.env.VITE_COMPANY_URL || "https://company.moken-store.cloud";
 
 const formatBytes = (bytes: number) => {
   if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)}KB`;
@@ -257,7 +257,7 @@ export function App() {
   const confirmAction = (title: string, message: string, onConfirm: () => void, danger = true) => {
     setConfirmDialog({ open: true, title, message, danger, onConfirm });
   };
-  const [loginForm, setLoginForm] = useState({ email: "merchant@moken-saas.online", password: "Store@2026" });
+  const [loginForm, setLoginForm] = useState({ email: "merchant@moken-store.cloud", password: "Store@2026" });
   const [productForm, setProductForm] = useState<CreateProductInput>({
     name: "New Product",
     slug: "new-product",

@@ -2,7 +2,7 @@ import http from "node:http";
 import httpProxy from "http-proxy";
 
 const port = Number(process.env.PORT ?? 5173);
-const rootDomain = process.env.ROOT_DOMAIN ?? "moken-saas.online";
+const rootDomain = process.env.ROOT_DOMAIN ?? "moken-store.cloud";
 const storefrontTarget = "http://127.0.0.1:5176";
 
 const targets = new Map([

@@ -24,7 +24,7 @@ function resolveApiBaseUrl() {
     return "http://localhost:4100/api";
   }
 
-  return `${window.location.protocol}//api.moken-saas.online/api`;
+  return `${window.location.protocol}//api.moken-store.cloud/api`;
 }
 
 const apiBaseUrl = resolveApiBaseUrl();

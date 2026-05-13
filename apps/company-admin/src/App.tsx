@@ -47,8 +47,8 @@ type CompanyState = {
   error?: string;
 };
 
-const merchantAdminUrl = import.meta.env.VITE_MERCHANT_URL || "https://merchant.moken-saas.online";
-const storefrontUrl = import.meta.env.VITE_STOREFRONT_URL || "https://store.moken-saas.online";
+const merchantAdminUrl = import.meta.env.VITE_MERCHANT_URL || "https://merchant.moken-store.cloud";
+const storefrontUrl = import.meta.env.VITE_STOREFRONT_URL || "https://store.moken-store.cloud";
 
 const formatPrice = (price: number, currency = "LYD") =>
   new Intl.NumberFormat("ar-LY", { style: "currency", currency, maximumFractionDigits: 0 }).format(price / 100);
@@ -103,7 +103,7 @@ const orderStatusLabel: Record<string, string> = {
 export function App() {
   const [state, setState] = useState<CompanyState>({ tenants: [], orders: [], loading: false, error: readSessionExpiredFlag() });
   const [page, setPage] = useState<Page>("dashboard");
-  const [loginForm, setLoginForm] = useState({ email: "owner@moken-saas.online", password: "Moken@2026" });
+  const [loginForm, setLoginForm] = useState({ email: "owner@moken-store.cloud", password: "Moken@2026" });
   const [loginSubmitting, setLoginSubmitting] = useState(false);
   const [toasts, setToasts] = useState<ToastItem[]>([]);
   const toastTimers = useRef<Map<string, ReturnType<typeof setTimeout>>>(new Map());
@@ -205,7 +205,7 @@ export function App() {
     setTenantForm({
       name: "متجر جديد",
       slug: "new-store",
-      primaryDomain: "new-store.moken-saas.online",
+      primaryDomain: "new-store.moken-store.cloud",
       ownerName: "مالك المتجر",
       ownerEmail: "owner@new-store.com",
       ownerPassword: "Store@2026"
@@ -341,7 +341,7 @@ export function App() {
               </button>
             </form>
             <div className="auth-hint">
-              للاختبار: <code>owner@moken-saas.online</code> / <code>Moken@2026</code>
+              للاختبار: <code>owner@moken-store.cloud</code> / <code>Moken@2026</code>
             </div>
           </section>
         </main>
@@ -984,11 +984,11 @@ function CreateTenantModal(props: {
                 <input
                   value={props.form.primaryDomain}
                   onChange={(e) => props.setForm({ ...props.form, primaryDomain: e.target.value })}
-                  placeholder="store.moken-saas.online"
+                  placeholder="store.moken-store.cloud"
                   required
                 />
                 <span className="hint">
-                  إذا كان فرعياً تحت <code>moken-saas.online</code> فسيعمل تلقائياً مع wildcard DNS.
+                  إذا كان فرعياً تحت <code>moken-store.cloud</code> فسيعمل تلقائياً مع wildcard DNS.
                 </span>
               </div>
               <div className="form-row">

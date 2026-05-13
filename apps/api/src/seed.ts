@@ -54,7 +54,7 @@ export function seedDemoStore() {
 }
 
 function seedDemoDomains(tenantId: string) {
-  const domains = ["demo.localhost", "moken-saas.online", "www.moken-saas.online", "store.moken-saas.online"];
+  const domains = ["demo.localhost", "moken-store.cloud", "www.moken-store.cloud", "store.moken-store.cloud"];
   const insertDomain = db.prepare(`
     insert into tenant_domains (id, tenant_id, domain, is_primary, verification_status, verification_token)
     values (?, ?, ?, ?, 'verified', ?)
@@ -94,7 +94,7 @@ function ensureStoreSettings(tenantId: string, storeName: string) {
   `).run(
     tenantId,
     storeName,
-    "hello@moken-saas.online",
+    "hello@moken-store.cloud",
     "0910000000",
     "0910000000",
     "طرابلس",
@@ -172,14 +172,14 @@ function seedDemoUsers(tenantId: string) {
     insertUser.run(nanoid(), input.tenantId, input.name, email, hashPassword(input.password), input.role);
   };
 
-  ensureUser("owner@moken-saas.online", {
+  ensureUser("owner@moken-store.cloud", {
     tenantId: null,
     name: "Moken Platform Owner",
     password: "Moken@2026",
     role: "platform_owner"
   });
 
-  ensureUser("merchant@moken-saas.online", {
+  ensureUser("merchant@moken-store.cloud", {
     tenantId,
     name: "Demo Store Owner",
     password: "Store@2026",

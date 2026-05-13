@@ -13,9 +13,9 @@ function appUrl(kind: "company" | "merchant" | "store") {
   }
 
   return {
-    company: import.meta.env.VITE_COMPANY_URL || "https://company.moken-saas.online",
-    merchant: import.meta.env.VITE_MERCHANT_URL || "https://merchant.moken-saas.online",
-    store: import.meta.env.VITE_STOREFRONT_URL || "https://store.moken-saas.online"
+    company: import.meta.env.VITE_COMPANY_URL || "https://company.moken-store.cloud",
+    merchant: import.meta.env.VITE_MERCHANT_URL || "https://merchant.moken-store.cloud",
+    store: import.meta.env.VITE_STOREFRONT_URL || "https://store.moken-store.cloud"
   }[kind];
 }
 

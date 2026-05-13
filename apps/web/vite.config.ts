@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     port: 5177,
     allowedHosts: [
-      "moken-saas.online",
-      "www.moken-saas.online"
+      "moken-store.cloud",
+      "www.moken-store.cloud"
     ]
   }
 });

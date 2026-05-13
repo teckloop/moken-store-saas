@@ -45,7 +45,7 @@ function resolveApiBaseUrl() {
     return "http://localhost:4100/api";
   }
 
-  return `${window.location.protocol}//api.moken-saas.online/api`;
+  return `${window.location.protocol}//api.moken-store.cloud/api`;
 }
 
 const apiBaseUrl = resolveApiBaseUrl();
@@ -63,7 +63,7 @@ function resolveStoreDomain() {
     return storedDomain;
   }
 
-  if (host === "localhost" || host === "127.0.0.1" || host === "merchant.moken-saas.online") {
+  if (host === "localhost" || host === "127.0.0.1" || host === "merchant.moken-store.cloud") {
     return "demo.localhost";
   }
 

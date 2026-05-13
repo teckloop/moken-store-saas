@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5175,
     allowedHosts: [
-      "merchant.moken-saas.online"
+      "merchant.moken-store.cloud"
     ]
   }
 });
